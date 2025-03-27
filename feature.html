@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Feature Page</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feature.html">Feature Page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="assets/logo.jpg" alt="Feature Logo" class="feature-logo">
+            <div>
+                <h2>Featured Products</h2>
+                <p>Find the best deals on our top products.</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="product-grid">
+            <h3>Our Products</h3>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="assets/jacket.jpg" alt="Jacket">
+                    <h4>Jacket</h4>
+                    <p>$10</p>
+                    <button onclick="addToCart('Jacket', 10)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/grey pants.jpg" alt="Grey Pants">
+                    <h4>Grey Pants</h4>
+                    <p>$20</p>
+                    <button onclick="addToCart('Grey Pants', 20)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/Anta Shoes.jpg" alt="Anta Shoes">
+                    <h4>Anta Shoes</h4>
+                    <p>$30</p>
+                    <button onclick="addToCart('Anta Shoes', 30)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/Unisex T-shirt.jpg" alt="Unisex T-shirt">
+                    <h4>Unisex T-shirt</h4>
+                    <p>$40</p>
+                    <button onclick="addToCart('Unisex T-shirt', 40)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart">
+            <h3>Shopping Cart</h3>
+            <ul id="cart-list"></ul>
+            <p>Total: $<span id="total-price">0</span></p>
+            <button class="back-btn" onclick="goBack()">Back</button>
+            <button class="checkout-btn" id="checkout-btn" onclick="checkout()" style="display: none;">Checkout</button>
+        </aside>
+
+        <div id="receipt-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeReceipt()">&times;</span>
+                <h2>Receipt</h2>
+                <pre id="receipt-content"></pre>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Maynard Sumbad. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
